@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+        <h1>Sorting Algorithm Visualizer</h1>
 
+    <div id="controls">
+        <label for="sizeSlider">Array Size :<span id="sizeValue">40</span></label>
+        <input type="range" min="10" max="100" value="40" id="sizeSlider" oninput="updateArray(this.value)">
+        <label for="speedSlider">Speed :<span id="speedValue">50x</span></label>
+        <input type="range" min="1" max="100" value="50" id="speedSlider" oninput="updateSpeed(this.value)">
+        <button onclick="generateArray(arrSize)" id="dis">Generate Random Array</button>
+        <!-- <button onclick="bubbleSort(arrSize)" id="dis">Bubble Sort</button>
+        <button onclick="selectionSort(arrSize)" id="dis">Selection Sort</button>
+        <button onclick="insertionSort(arrSize)" id="dis">Insertion Sort</button> -->
+        <label for="algoSelect">Choose Algorithm :</label>
+        <select id="algoSelect">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+        </select>
+        <button onclick="startSorting()">Start Sorting</button>
+        <button onclick="stopSorting()">Stop Sorting</button>
+    </div>
+
+    <div id="bar-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
